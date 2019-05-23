@@ -2,30 +2,31 @@ package com.neuedu.hospitalinformationsystem.po;
 
 public class BillCategory {
 
-    private int dcId;
+    private Integer bcId;
+
     private String bcName;
 
     @Override
     public String toString() {
         return "BillCategory{" +
-                "dcId=" + dcId +
-                ", bcName='" + bcName + '\'' +
+                "bcid=" + bcId +
+                ", bcname='" + bcName + '\'' +
                 '}';
     }
 
-    public int getDcId() {
-        return dcId;
+    public Integer getBcid() {
+        return bcId;
     }
 
-    public void setDcId(int dcId) {
-        this.dcId = dcId;
+    public void setBcid(Integer bcid) {
+        this.bcId = bcId;
     }
 
-    public String getBcName() {
+    public String getBcname() {
         return bcName;
     }
 
-    public void setBcName(String bcName) {
+    public void setBcname(String bcname) {
         this.bcName = bcName;
     }
 }
