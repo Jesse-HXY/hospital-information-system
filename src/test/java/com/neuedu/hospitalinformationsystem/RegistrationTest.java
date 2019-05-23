@@ -10,11 +10,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.annotation.Resource;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RegistrationTest {
+
     @Resource
-    public RegistrationService registrationService;
+    private RegistrationService registrationService;
 
     @Test
     public void getDepartmentTest() {
@@ -22,5 +25,16 @@ public class RegistrationTest {
         registration.setrId(1);
         List<Registration> registrations = registrationService.getRegistration(registration);
         System.out.println(registrations);
+    }
+
+    @Test
+    public void deleteDepartment() {
+        assertEquals(true, registrationService.deleteRegistration(1));
+    }
+
+    @Test
+    public void insertDepartment() {
+        Registration registration = new Registration();
+        assertEquals(true, registrationService.insertRegistration(registration));
     }
 }

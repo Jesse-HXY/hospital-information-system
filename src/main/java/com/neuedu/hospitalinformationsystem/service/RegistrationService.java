@@ -2,14 +2,16 @@ package com.neuedu.hospitalinformationsystem.service;
 
 import com.neuedu.hospitalinformationsystem.mapper.RegistrationMapper;
 import com.neuedu.hospitalinformationsystem.po.Registration;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
+@Service
 public class RegistrationService {
 
     @Resource
-    public RegistrationMapper registrationMapper;
+    private RegistrationMapper registrationMapper;
 
     public List<Registration> getRegistration(Registration registration){
         List<Registration> registrations = registrationMapper.getRegistrations(registration);
