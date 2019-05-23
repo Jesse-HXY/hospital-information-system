@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neuedu.hospitalinformationsystem.mapper.DepartmentMapper">
 
-    <select id="getDepartments" resultType="Department">
+    <select id="getDepartments" resultType="com.neuedu.hospitalinformationsystem.po.Department">
         select dId, dName, dCategory from department
         <where>
             <if test="dId != null">

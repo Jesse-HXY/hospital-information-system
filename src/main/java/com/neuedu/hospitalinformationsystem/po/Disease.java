@@ -5,8 +5,10 @@ public class Disease {
     private String dcId;
     private String disName;
     private String disCode;
-    private String disSexLimitation;
-    private String disCareLimitation;
+
+
+
+    private String disIcd;
 
     @Override
     public String toString() {
@@ -15,8 +17,7 @@ public class Disease {
                 ", dcId='" + dcId + '\'' +
                 ", disName='" + disName + '\'' +
                 ", disCode='" + disCode + '\'' +
-                ", disSexLimitation='" + disSexLimitation + '\'' +
-                ", disCareLimitation='" + disCareLimitation + '\'' +
+                ", disIcd='" + disIcd + '\'' +
                 '}';
     }
 
@@ -60,19 +61,12 @@ public class Disease {
         this.disCode = disSpell;
     }
 
-    public String getDisSexLimitation() {
-        return disSexLimitation;
+    public String getDisIcd() {
+        return disIcd;
     }
 
-    public void setDisSexLimitation(String disSexLimitation) {
-        this.disSexLimitation = disSexLimitation;
+    public void setDisIcd(String disIcd) {
+        this.disIcd = disIcd;
     }
 
-    public String getDisCareLimitation() {
-        return disCareLimitation;
-    }
-
-    public void setDisCareLimitation(String disCareLimitation) {
-        this.disCareLimitation = disCareLimitation;
-    }
 }

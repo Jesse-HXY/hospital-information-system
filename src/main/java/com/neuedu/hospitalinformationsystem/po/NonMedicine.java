@@ -6,6 +6,7 @@ public class NonMedicine {
     private double nmFee;
     private String nmStandard;
     private String nmFeeType;
+    private String nmCode;
 
     @Override
     public String toString() {
@@ -56,5 +57,13 @@ public class NonMedicine {
 
     public void setNmFee(double nmFee) {
         this.nmFee = nmFee;
+    }
+
+    public String getNmCode() {
+        return nmCode;
+    }
+
+    public void setNmCode(String nmCode) {
+        this.nmCode = nmCode;
     }
 }
