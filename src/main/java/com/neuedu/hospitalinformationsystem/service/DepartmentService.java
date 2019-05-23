@@ -18,11 +18,13 @@ public class DepartmentService {
         return departments;
     }
 
-    public void deleteDepartment(String dId){
+    public boolean deleteDepartment(String dId){
         departmentMapper.deleteDepartment(dId);
+        return true;
     }
 
-    public void insertDepartment(Department department){
+    public boolean insertDepartment(Department department){
         departmentMapper.insertDepartment(department);
+        return true;
     }
 }

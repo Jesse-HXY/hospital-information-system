@@ -14,19 +14,8 @@ import java.util.List;
 @SpringBootTest
 public class HospitalInformationSystemApplicationTests {
 
-    @Resource
-    private DepartmentMapper departmentMapper;
 
     @Test
     public void contextLoads() {
     }
-
-    @Test
-    public void getDepartmentTest() {
-        Department department = new Department();
-        department.setdId("a");
-        List<Department> departments = departmentMapper.getDepartments(department);
-        System.out.println(departments);
-    }
-
 }

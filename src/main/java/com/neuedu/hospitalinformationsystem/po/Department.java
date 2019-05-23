@@ -3,7 +3,7 @@ package com.neuedu.hospitalinformationsystem.po;
 public class Department {
     private String dId;
     private String dName;
-    private boolean dCategory;//0代表 临床科室,1代表 医技科室
+    private boolean dCategory;//true代表 临床科室, false代表 医技科室
 
     @Override
     public String toString() {

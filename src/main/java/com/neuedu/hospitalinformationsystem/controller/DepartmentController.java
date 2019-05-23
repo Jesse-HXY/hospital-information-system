@@ -23,13 +23,22 @@ public class DepartmentController {
 
     @RequestMapping("/deleteDepartment")
     public String deleteDepartment(String dId){
-        departmentService.deleteDepartment(dId);
-        return "{\"result\":true}";
+        Boolean result = departmentService.deleteDepartment(dId);
+        if(result){
+            return "{\"result\":true}";
+        }else {
+            return "{\"result\":false}";
+        }
+
     }
 
     @RequestMapping("/insertDepartment")
     public String insertDepartment(@RequestBody Department department){
-        departmentService.insertDepartment(department);
-        return "{\"result\":true}";
+        Boolean result = departmentService.insertDepartment(department);
+        if(result){
+            return "{\"result\":true}";
+        }else {
+            return "{\"result\":false}";
+        }
     }
 }

@@ -21,7 +21,7 @@
     </select>
 
     <delete id="deleteDepartment">
-        delete from department where Id = #{dId}
+        delete from department where dId = #{dId}
     </delete>
 
     <insert id="insertDepartment">
