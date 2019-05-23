@@ -7,8 +7,10 @@ import java.util.List;
 
 public interface BillCategoryMapper {
     void deleteBillCategory(Integer bcId);
+
     void insertBillCategory(BillCategory billcategory);
-   List<BillCategory> selectBillCategory(BillCategory record);
+
+    List<BillCategory> selectBillCategory(BillCategory record);
 
 
 }

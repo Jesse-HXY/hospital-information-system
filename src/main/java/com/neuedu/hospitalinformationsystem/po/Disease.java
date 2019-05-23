@@ -5,9 +5,6 @@ public class Disease {
     private String dcId;
     private String disName;
     private String disCode;
-
-
-
     private String disIcd;
 
     @Override
