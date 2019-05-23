@@ -1,9 +1,7 @@
 package com.neuedu.hospitalinformationsystem;
 
-import com.neuedu.hospitalinformationsystem.mapper.DepartmentMapper;
 import com.neuedu.hospitalinformationsystem.po.Department;
 import com.neuedu.hospitalinformationsystem.service.DepartmentService;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -37,9 +35,9 @@ public class DepartmentTest {
     @Test
     public void insertDepartment() {
         Department department = new Department();
-        department.setdId("h");
+        department.setdId("f");
         department.setdName("hhh");
-        department.setdCatagory(true);
+        department.setdCatagory(1);
         assertEquals(true, departmentService.insertDepartment(department));
     }
 }

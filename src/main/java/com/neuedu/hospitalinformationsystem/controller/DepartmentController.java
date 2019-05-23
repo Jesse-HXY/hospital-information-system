@@ -2,6 +2,7 @@ package com.neuedu.hospitalinformationsystem.controller;
 
 import com.neuedu.hospitalinformationsystem.po.Department;
 import com.neuedu.hospitalinformationsystem.service.DepartmentService;
+import com.neuedu.hospitalinformationsystem.service.RegistrationService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

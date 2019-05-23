@@ -2,6 +2,7 @@ package com.neuedu.hospitalinformationsystem.po;
 
 public class Disease {
     private String disId;
+    private String dcId;
     private String disName;
     private String disCode;
     private String disSexLimitation;
@@ -11,11 +12,28 @@ public class Disease {
     public String toString() {
         return "Disease{" +
                 "disId='" + disId + '\'' +
+                ", dcId='" + dcId + '\'' +
                 ", disName='" + disName + '\'' +
-                ", disSpell='" + disCode + '\'' +
+                ", disCode='" + disCode + '\'' +
                 ", disSexLimitation='" + disSexLimitation + '\'' +
                 ", disCareLimitation='" + disCareLimitation + '\'' +
                 '}';
+    }
+
+    public String getDcId() {
+        return dcId;
+    }
+
+    public void setDcId(String dcId) {
+        this.dcId = dcId;
+    }
+
+    public String getDisCode() {
+        return disCode;
+    }
+
+    public void setDisCode(String disCode) {
+        this.disCode = disCode;
     }
 
     public String getDisId() {

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.hospitalinformationsystem.mapper.RegistrationMapper">
+
+    <select id="getRegistration" resultType="Registration">
+        select rId, rName, isDefault, rOrder, rFee from registration where rName = #{rName}
+    </select>
+
+    <delete id="deleteRegistration">
+        delete from registration where rId = #{rId}
+    </delete>
+
+    <insert id="insertRegistration">
+        insert into registration values(#{rId}, #{rName}, #{isDefault}, #{rOrder}, #{rFee})
+    </insert>
+
+</mapper>
