@@ -22,7 +22,7 @@ public class DepartmentTest {
     @Test
     public void getDepartmentTest() {
         Department department = new Department();
-        department.setdId("a");
+        department.setdId("AZBK");
         List<Department> departments = departmentService.getDepartments(department);
         System.out.println(departments);
     }
