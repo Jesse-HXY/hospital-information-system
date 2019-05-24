@@ -18,6 +18,10 @@ public class DepartmentService {
         return departments;
     }
 
+    public List<Department> getAllDepartments() {
+        List<Department> departments = departmentMapper.getAllDepartments();
+        return departments;
+    }
     public boolean deleteDepartment(String dId) {
         departmentMapper.deleteDepartment(dId);
         return true;

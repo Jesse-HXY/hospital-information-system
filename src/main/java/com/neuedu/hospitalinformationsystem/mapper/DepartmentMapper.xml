@@ -20,6 +20,11 @@
 
     </select>
 
+    <select id="getAllDepartments" resultType="com.neuedu.hospitalinformationsystem.po.Department">
+        select dId, dName, dCategory from department
+    </select>
+
+
     <delete id="deleteDepartment">
         delete from department where dId = #{dId}
     </delete>

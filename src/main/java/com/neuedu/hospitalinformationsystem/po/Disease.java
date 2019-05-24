@@ -1,15 +1,15 @@
 package com.neuedu.hospitalinformationsystem.po;
 
 public class Disease {
-    /*自动生成主键*/
+    //自动生成主键
     private Integer disId;
-/*疾病完整编码*/
+    //疾病完整编码
     private String disIcd;
-/*疾病完整名称*/
+    //疾病完整名称
     private String disName;
-//拼音首拼
+    //拼音首拼
     private String disCode;
-//疾病种类
+    //疾病种类
     private String disType;
 
 

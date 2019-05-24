@@ -21,6 +21,11 @@ public class DepartmentController {
         return departmentService.getDepartments(department);
     }
 
+    @RequestMapping("/getAllDepartments")
+    public List<Department> getAllDepartments() {
+        return departmentService.getAllDepartments();
+    }
+
     @RequestMapping("/deleteDepartment")
     public String deleteDepartment(String dId) {
         Boolean result = departmentService.deleteDepartment(dId);
