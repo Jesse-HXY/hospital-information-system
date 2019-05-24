@@ -2,6 +2,7 @@ package com.neuedu.hospitalinformationsystem.controller;
 
 import com.neuedu.hospitalinformationsystem.po.Department;
 import com.neuedu.hospitalinformationsystem.service.DepartmentService;
+import net.sf.json.JSONObject;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,9 +22,14 @@ public class DepartmentController {
         return departmentService.getDepartments(department);
     }
 
+    @RequestMapping("/getAllDepartments")
+    public List<Department> getAllDepartments() {
+        return departmentService.getAllDepartments();
+    }
+
     @RequestMapping("/deleteDepartment")
-    public String deleteDepartment(String dId) {
-        Boolean result = departmentService.deleteDepartment(dId);
+    public String deleteDepartment(@RequestBody JSONObject dId) {
+        Boolean result = departmentService.deleteDepartment(dId.getString("dId"));
         if (result) {
             return "{\"result\":true}";
         } else {
