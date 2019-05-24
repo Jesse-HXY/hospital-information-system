@@ -5,15 +5,8 @@
 <mapper namespace="com.neuedu.hospitalinformationsystem.mapper.DiseaseMapper">
 
     <select id="getDiseaseType" resultType="String">
-        select disType from disease
+        select distinct disType from disease
     </select>
 
-    <delete id="deleteDepartment">
-        delete from department where dId = #{dId}
-    </delete>
-
-    <insert id="insertDepartment">
-        insert into department values(#{dId},#{dName},#{dCategory})
-    </insert>
 
 </mapper>
