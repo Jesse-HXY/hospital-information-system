@@ -13,17 +13,17 @@ public class DepartmentService {
     @Resource
     private DepartmentMapper departmentMapper;
 
-    public List<Department> getDepartments(Department department){
+    public List<Department> getDepartments(Department department) {
         List<Department> departments = departmentMapper.getDepartments(department);
         return departments;
     }
 
-    public boolean deleteDepartment(String dId){
+    public boolean deleteDepartment(String dId) {
         departmentMapper.deleteDepartment(dId);
         return true;
     }
 
-    public boolean insertDepartment(Department department){
+    public boolean insertDepartment(Department department) {
         departmentMapper.insertDepartment(department);
         return true;
     }

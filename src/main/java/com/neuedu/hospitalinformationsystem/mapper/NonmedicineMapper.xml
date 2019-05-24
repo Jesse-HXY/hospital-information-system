@@ -1,42 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neuedu.hospitalinformationsystem.mapper.NonmedicineMapper">
-  <resultMap id="BaseResultMap" type="com.neuedu.hospitalinformationsystem.po.NonMedicine">
-    <id column="nmId" jdbcType="INTEGER" property="nmId" />
-    <result column="nmName" jdbcType="VARCHAR" property="nmName" />
-    <result column="nmFee" jdbcType="DOUBLE" property="nmFee" />
-    <result column="nmStandard" jdbcType="VARCHAR" property="nmStandard" />
-    <result column="nmFeeType" jdbcType="VARCHAR" property="nmFeeType" />
-    <result column="nmCode" jdbcType="VARCHAR" property="nmCode" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    nmId, nmName, nmFee, nmStandard, nmFeeType, nmCode
-  </sql>
 
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from nonmedicine
     where nmId = #{nmid,jdbcType=INTEGER}
   </delete>
 
-  <insert id="insert" keyColumn="nmId" keyProperty="nmid" parameterType="com.neuedu.hospitalinformationsystem.po.NonMedicine" useGeneratedKeys="true">
+    <insert id="insert" keyColumn="nmId" keyProperty="nmid"
+            parameterType="com.neuedu.hospitalinformationsystem.po.NonMedicine" useGeneratedKeys="true">
     insert into nonmedicine (nmName, nmFee, nmStandard, 
       nmFeeType, nmCode)
     values (#{nmName,jdbcType=VARCHAR}, #{nmFee,jdbcType=DOUBLE}, #{nmStandard,jdbcType=VARCHAR},
       #{nmFeeType,jdbcType=VARCHAR}, #{nmCode,jdbcType=VARCHAR})
   </insert>
 
-<select id="findBynmIdAndnmName" resultType="com.neuedu.hospitalinformationsystem.po.NonMedicine">
-  select * from nonmedicine
-<where>
-  <if test="nmId != null">
-   and nmId=#{nmId}
-  </if>
- <if test="nmCode != null and nmCode != ''">
-   and nmCode=#{nmCode}
- </if>
-  <if test="nmName != null and nmName != ''">
-    and nmName=#{nmName}
-  </if>
-</where>
-</select>
+    <select id="findBynmIdAndnmName" resultType="com.neuedu.hospitalinformationsystem.po.NonMedicine">
+        select * from nonmedicine
+        <where>
+            <if test="nmId != null">
+                and nmId=#{nmId}
+            </if>
+            <if test="nmCode != null and nmCode != ''">
+                and nmCode=#{nmCode}
+            </if>
+            <if test="nmName != null and nmName != ''">
+                and nmName=#{nmName}
+            </if>
+        </where>
+    </select>
 </mapper>

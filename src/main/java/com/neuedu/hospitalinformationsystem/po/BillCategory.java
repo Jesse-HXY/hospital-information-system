@@ -14,19 +14,19 @@ public class BillCategory {
                 '}';
     }
 
-    public Integer getBcid() {
+    public Integer getBcId() {
         return bcId;
     }
 
-    public void setBcid(Integer bcid) {
+    public void setBcId(Integer bcId) {
         this.bcId = bcId;
     }
 
-    public String getBcname() {
+    public String getBcName() {
         return bcName;
     }
 
-    public void setBcname(String bcname) {
+    public void setBcName(String bcName) {
         this.bcName = bcName;
     }
 }

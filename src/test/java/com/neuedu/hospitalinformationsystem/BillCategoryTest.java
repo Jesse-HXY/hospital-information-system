@@ -24,7 +24,7 @@ public class BillCategoryTest {
     @Test
     public void getBillCategorys() {
         BillCategory billCategory = new BillCategory();
-        billCategory.setBcid(1);
+        billCategory.setBcId(1);
         List<BillCategory> billCategoryList = billCategoryService.selectBillCategory(billCategory);
         System.out.println(billCategoryList);
     }
@@ -37,8 +37,8 @@ public class BillCategoryTest {
     @Test
     public void insertBillCategory() {
         BillCategory billCategory = new BillCategory();
-        billCategory.setBcid(4);
-        billCategory.setBcname("hhh");
+        billCategory.setBcId(2);
+        billCategory.setBcName("hhh");
         assertEquals(true, billCategoryService.insertBillCategory(billCategory));
     }
 }

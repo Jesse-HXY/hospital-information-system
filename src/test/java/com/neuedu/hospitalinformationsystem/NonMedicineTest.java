@@ -23,7 +23,7 @@ public class NonMedicineTest {
     @Test
     public void getNonMedicineTest() {
         NonMedicine nonMedicine = new NonMedicine();
-        nonMedicine.setNmId(1);
+        nonMedicine.setNmCode("JHCSYF(FYQJJ)");
         List<NonMedicine> nonMedicines = nonMedicineService.findBynmIdAndnmName(nonMedicine);
         System.out.println(nonMedicines);
     }
@@ -36,7 +36,7 @@ public class NonMedicineTest {
     @Test
     public void insertNonMedicine() {
         NonMedicine nonMedicine = new NonMedicine();
-        nonMedicine.setNmId(1);
+        nonMedicine.setNmId(20000);
         nonMedicine.setNmName("hhh");
         nonMedicine.setNmCode("hhh");
         assertEquals(true, nonMedicineService.insert(nonMedicine));

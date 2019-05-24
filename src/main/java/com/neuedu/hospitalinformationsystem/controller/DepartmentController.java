@@ -17,27 +17,27 @@ public class DepartmentController {
     private DepartmentService departmentService;
 
     @RequestMapping("/getDepartments")
-    public List<Department> getDepartments(@RequestBody Department department){
+    public List<Department> getDepartments(@RequestBody Department department) {
         return departmentService.getDepartments(department);
     }
 
     @RequestMapping("/deleteDepartment")
-    public String deleteDepartment(String dId){
+    public String deleteDepartment(String dId) {
         Boolean result = departmentService.deleteDepartment(dId);
-        if(result){
+        if (result) {
             return "{\"result\":true}";
-        }else {
+        } else {
             return "{\"result\":false}";
         }
 
     }
 
     @RequestMapping("/insertDepartment")
-    public String insertDepartment(@RequestBody Department department){
+    public String insertDepartment(@RequestBody Department department) {
         Boolean result = departmentService.insertDepartment(department);
-        if(result){
+        if (result) {
             return "{\"result\":true}";
-        }else {
+        } else {
             return "{\"result\":false}";
         }
     }

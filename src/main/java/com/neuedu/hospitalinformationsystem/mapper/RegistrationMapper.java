@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface RegistrationMapper {
     List<Registration> getRegistrations(Registration registration);
+
     void deleteRegistration(int rId);
+
     void insertRegistration(Registration registration);
 }

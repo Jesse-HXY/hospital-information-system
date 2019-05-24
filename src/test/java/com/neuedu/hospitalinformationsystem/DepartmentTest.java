@@ -35,8 +35,8 @@ public class DepartmentTest {
     @Test
     public void insertDepartment() {
         Department department = new Department();
-        department.setdId("f");
-        department.setdName("hhh");
+        department.setdId("df");
+        department.setdName("h3h");
         department.setdCatagory(1);
         assertEquals(true, departmentService.insertDepartment(department));
     }

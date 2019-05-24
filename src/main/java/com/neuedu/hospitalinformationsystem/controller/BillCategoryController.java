@@ -19,27 +19,27 @@ public class BillCategoryController {
     private BillCategoryService billCategoryService;
 
     @RequestMapping("/getBillCategorys")
-    public List<BillCategory> getBillCategorys(@RequestBody BillCategory BillCategory){
+    public List<BillCategory> getBillCategorys(@RequestBody BillCategory BillCategory) {
         return billCategoryService.selectBillCategory(BillCategory);
     }
 
     @RequestMapping("/deleteBillCategory")
-    public String deleteBillCategory(Integer bcId){
+    public String deleteBillCategory(Integer bcId) {
         Boolean result = billCategoryService.deleteBillCategory(bcId);
-        if(result){
+        if (result) {
             return "{\"result\":true}";
-        }else {
+        } else {
             return "{\"result\":false}";
         }
 
     }
 
     @RequestMapping("/insertBillCategory")
-    public String insertBillCategory(@RequestBody BillCategory billCategory){
+    public String insertBillCategory(@RequestBody BillCategory billCategory) {
         Boolean result = billCategoryService.insertBillCategory(billCategory);
-        if(result){
+        if (result) {
             return "{\"result\":true}";
-        }else {
+        } else {
             return "{\"result\":false}";
         }
     }

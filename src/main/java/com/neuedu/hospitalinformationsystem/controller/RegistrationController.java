@@ -16,26 +16,26 @@ public class RegistrationController {
     private RegistrationService registrationService;
 
     @RequestMapping("/getRegistration")
-    public List<Registration> getRegistration(@RequestBody Registration registration){
+    public List<Registration> getRegistration(@RequestBody Registration registration) {
         return registrationService.getRegistration(registration);
     }
 
     @RequestMapping("/deleteRegistration")
-    public String deleteRegistration(int rId){
+    public String deleteRegistration(int rId) {
         Boolean result = registrationService.deleteRegistration(rId);
-        if(result){
+        if (result) {
             return "{\"result\":true}";
-        }else {
+        } else {
             return "{\"result\":false}";
         }
     }
 
     @RequestMapping("/insertRegistration")
-    public String insertRegistration(@RequestBody Registration registration){
+    public String insertRegistration(@RequestBody Registration registration) {
         Boolean result = registrationService.insertRegistration(registration);
-        if(result){
+        if (result) {
             return "{\"result\":true}";
-        }else {
+        } else {
             return "{\"result\":false}";
         }
     }

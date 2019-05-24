@@ -18,27 +18,27 @@ public class NonMedicineController {
     private NonMedicineService nonMedicineService;
 
     @RequestMapping("/getNonMedicine")
-    public List<NonMedicine> getNonMedicine(@RequestBody NonMedicine nonMedicine){
+    public List<NonMedicine> getNonMedicine(@RequestBody NonMedicine nonMedicine) {
         return nonMedicineService.findBynmIdAndnmName(nonMedicine);
     }
 
     @RequestMapping("/deleteNonMedicine")
-    public String deleteNonMedicine(Integer nmId){
+    public String deleteNonMedicine(Integer nmId) {
         Boolean result = nonMedicineService.deleteByPrimaryKey(nmId);
-        if(result){
+        if (result) {
             return "{\"result\":true}";
-        }else {
+        } else {
             return "{\"result\":false}";
         }
 
     }
 
     @RequestMapping("/insertNonMedicine")
-    public String insertNonMedicine(@RequestBody NonMedicine nonMedicine){
+    public String insertNonMedicine(@RequestBody NonMedicine nonMedicine) {
         Boolean result = nonMedicineService.insert(nonMedicine);
-        if(result){
+        if (result) {
             return "{\"result\":true}";
-        }else {
+        } else {
             return "{\"result\":false}";
         }
     }

@@ -6,17 +6,17 @@
     select bcId,bcName from BillCategory
     <where>
       <if test="bcId != null">
-        and bcId = #{bcid}
+        and bcId = #{bcId}
       </if>
-      <if test="bcname != null and bcname != ''">
-        and bcName=#{bcname}
+      <if test="bcName != null and bcname != ''">
+        and bcName=#{bcName}
       </if>
     </where>
 
   </select>
 
   <insert id="insertBillCategory">
-    insert into Billcategory value (#{bcid} ,#{bcname} )
+    insert into Billcategory value (#{bcId} ,#{bcName} )
   </insert>
 
   <delete id="deleteBillCategory">
