@@ -16,8 +16,15 @@ public class DiseaseService {
     public List<String> getDiseaseType() {
         return diseaseMapper.getDiseaseType();
     }
+
     public List<Disease> getDiseases(Disease disease) {
         List<Disease> diseases = diseaseMapper.getDiseases(disease);
         return diseases;
     }
+
+    public int insert(Disease record) {
+        return diseaseMapper.insert(record);
+    }
 }
+
+

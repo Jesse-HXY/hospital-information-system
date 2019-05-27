@@ -1,41 +1,32 @@
 package com.neuedu.hospitalinformationsystem.po;
 
 public class User {
-    private int uId;
-    private String uNickname;
+    private Integer uId;
+
+    private String uNickName;
+
     private String uPassword;
+
     private String uName;
-    private int dId;
-    private boolean isDoctor;
+
+    private Boolean isDoctor;
+
     private String uCategory;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "uId=" + uId +
-                ", uNickname='" + uNickname + '\'' +
-                ", uPassword='" + uPassword + '\'' +
-                ", uName='" + uName + '\'' +
-                ", dId=" + dId +
-                ", isDoctor=" + isDoctor +
-                ", uCatagory='" + uCategory + '\'' +
-                '}';
-    }
-
-    public int getuId() {
+    public Integer getuId() {
         return uId;
     }
 
-    public void setuId(int uId) {
+    public void setuId(Integer uId) {
         this.uId = uId;
     }
 
-    public String getuNickname() {
-        return uNickname;
+    public String getuNickName() {
+        return uNickName;
     }
 
-    public void setuNickname(String uNickname) {
-        this.uNickname = uNickname;
+    public void setuNickName(String uNickName) {
+        this.uNickName = uNickName;
     }
 
     public String getuPassword() {
@@ -54,27 +45,35 @@ public class User {
         this.uName = uName;
     }
 
-    public int getdId() {
-        return dId;
-    }
-
-    public void setdId(int dId) {
-        this.dId = dId;
-    }
-
-    public boolean isDoctor() {
+    public Boolean getIsDoctor() {
         return isDoctor;
     }
 
-    public void setDoctor(boolean doctor) {
-        isDoctor = doctor;
+    public void setIsDoctor(Boolean isDoctor) {
+        this.isDoctor = isDoctor;
     }
 
-    public String getuCatagory() {
+    public String getuCategory() {
         return uCategory;
     }
 
-    public void setuCatagory(String uCatagory) {
-        this.uCategory = uCatagory;
+    public void setuCategory(String uCategory) {
+        this.uCategory = uCategory;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", uId=").append(uId);
+        sb.append(", uNickName=").append(uNickName);
+        sb.append(", uPassword=").append(uPassword);
+        sb.append(", uName=").append(uName);
+        sb.append(", isDoctor=").append(isDoctor);
+        sb.append(", uCategory=").append(uCategory);
+        sb.append("]");
+        return sb.toString();
     }
 }

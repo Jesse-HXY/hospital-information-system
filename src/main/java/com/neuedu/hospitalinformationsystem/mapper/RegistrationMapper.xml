@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neuedu.hospitalinformationsystem.mapper.RegistrationMapper">
 
-    <select id="getRegistrations" resultType="com.neuedu.hospitalinformationsystem.po.Registration">
-        select rId, rName, isDefault, rOrder, rFee from registration where rName = #{rName}
-    </select>
-
-    <delete id="deleteRegistration">
-        delete from registration where rId = #{rId}
-    </delete>
-
-    <insert id="insertRegistration">
-        insert into registration values(#{rId}, #{rName}, #{isDefault}, #{rOrder}, #{rFee})
-    </insert>
-
+  <insert id="insert" parameterType="com.neuedu.hospitalinformationsystem.po.Registration">
+    <!--@mbg.generated-->
+    insert into registration (rId, drId, eId, 
+      dId, mRId, rLId, pId, 
+      `uId`, rOrder, rFee, hasMedicalHistory
+      )
+    values (#{rId,jdbcType=INTEGER}, #{drId,jdbcType=INTEGER}, #{eId,jdbcType=INTEGER}, 
+      #{dId,jdbcType=VARCHAR}, #{mRId,jdbcType=INTEGER}, #{rLId,jdbcType=INTEGER}, #{pId,jdbcType=INTEGER}, 
+      #{uId,jdbcType=INTEGER}, #{rOrder,jdbcType=INTEGER}, #{rFee,jdbcType=DOUBLE}, #{hasMedicalHistory,jdbcType=BOOLEAN}
+      )
+  </insert>
 </mapper>

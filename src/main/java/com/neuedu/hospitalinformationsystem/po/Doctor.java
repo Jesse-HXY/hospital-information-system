@@ -1,40 +1,46 @@
 package com.neuedu.hospitalinformationsystem.po;
 
 public class Doctor {
-    private int uId;
-    private String dVocation;
-    private String isDue;
+    private Integer uId;
 
-    @Override
-    public String toString() {
-        return "Doctor{" +
-                "uId=" + uId +
-                ", dVocation='" + dVocation + '\'' +
-                ", isDue='" + isDue + '\'' +
-                '}';
-    }
+    private String dVacation;
 
-    public int getuId() {
+    private Boolean isDue;
+
+    public Integer getuId() {
         return uId;
     }
 
-    public void setuId(int uId) {
+    public void setuId(Integer uId) {
         this.uId = uId;
     }
 
-    public String getdVocation() {
-        return dVocation;
+    public String getdVacation() {
+        return dVacation;
     }
 
-    public void setdVocation(String dVocation) {
-        this.dVocation = dVocation;
+    public void setdVacation(String dVacation) {
+        this.dVacation = dVacation;
     }
 
-    public String getIsDue() {
+    public Boolean getIsDue() {
         return isDue;
     }
 
-    public void setIsDue(String isDue) {
+    public void setIsDue(Boolean isDue) {
         this.isDue = isDue;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", uId=").append(uId);
+        sb.append(", dVacation=").append(dVacation);
+        sb.append(", isDue=").append(isDue);
+        sb.append("]");
+        return sb.toString();
     }
 }

@@ -1,15 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neuedu.hospitalinformationsystem.mapper.DiseaseMapper">
+  <insert id="insert" parameterType="com.neuedu.hospitalinformationsystem.po.Disease">
+    <!--@mbg.generated-->
+    insert into disease (disId, disIcd, disName, 
+      disCode, disType)
+    values (#{disId,jdbcType=INTEGER}, #{disIcd,jdbcType=VARCHAR}, #{disName,jdbcType=VARCHAR}, 
+      #{disCode,jdbcType=VARCHAR}, #{disType,jdbcType=VARCHAR})
+  </insert>
 
     <select id="getDiseaseType" resultType="String">
         select distinct disType from disease
     </select>
 
     <select id="getDiseases" resultType="com.neuedu.hospitalinformationsystem.po.Disease">
-        select * form disease
+        select * from disease
         <where>
             <if test="disName != null and disName != ''">
                 and disName like '%' #{disName} '%'

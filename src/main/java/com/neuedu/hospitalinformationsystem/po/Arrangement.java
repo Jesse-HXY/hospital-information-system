@@ -1,102 +1,59 @@
 package com.neuedu.hospitalinformationsystem.po;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Arrangement {
-    private int aId;
-    private Date aDate;
-    private int dId;
-    private int uId;
-    private int rId;
-    private boolean isValid;
-    private String aCategory;
-    private int aLimitation;
-    private int aLeft;
+    private Integer aId;
 
-    @Override
-    public String toString() {
-        return "Arrangement{" +
-                "aId=" + aId +
-                ", aDate=" + aDate +
-                ", dId=" + dId +
-                ", uId=" + uId +
-                ", rId=" + rId +
-                ", isValid=" + isValid +
-                ", aCatagory='" + aCategory + '\'' +
-                ", aLimitation=" + aLimitation +
-                ", aLeft=" + aLeft +
-                '}';
-    }
+    private String arId;
 
-    public int getaId() {
+    private Date aBegin;
+
+    private Date aEnd;
+
+    public Integer getaId() {
         return aId;
     }
 
-    public void setaId(int aId) {
+    public void setaId(Integer aId) {
         this.aId = aId;
     }
 
-    public Date getaDate() {
-        return aDate;
+    public String getArId() {
+        return arId;
     }
 
-    public void setaDate(Date aDate) {
-        this.aDate = aDate;
+    public void setArId(String arId) {
+        this.arId = arId;
     }
 
-    public int getdId() {
-        return dId;
+    public Date getaBegin() {
+        return aBegin;
     }
 
-    public void setdId(int dId) {
-        this.dId = dId;
+    public void setaBegin(Date aBegin) {
+        this.aBegin = aBegin;
     }
 
-    public int getuId() {
-        return uId;
+    public Date getaEnd() {
+        return aEnd;
     }
 
-    public void setuId(int uId) {
-        this.uId = uId;
+    public void setaEnd(Date aEnd) {
+        this.aEnd = aEnd;
     }
 
-    public int getrId() {
-        return rId;
-    }
-
-    public void setrId(int rId) {
-        this.rId = rId;
-    }
-
-    public boolean isValid() {
-        return isValid;
-    }
-
-    public void setValid(boolean valid) {
-        isValid = valid;
-    }
-
-    public String getaCatagory() {
-        return aCategory;
-    }
-
-    public void setaCatagory(String aCatagory) {
-        this.aCategory = aCatagory;
-    }
-
-    public int getaLimitation() {
-        return aLimitation;
-    }
-
-    public void setaLimitation(int aLimitation) {
-        this.aLimitation = aLimitation;
-    }
-
-    public int getaLeft() {
-        return aLeft;
-    }
-
-    public void setaLeft(int aLeft) {
-        this.aLeft = aLeft;
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", aId=").append(aId);
+        sb.append(", arId=").append(arId);
+        sb.append(", aBegin=").append(aBegin);
+        sb.append(", aEnd=").append(aEnd);
+        sb.append("]");
+        return sb.toString();
     }
 }

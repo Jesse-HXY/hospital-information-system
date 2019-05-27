@@ -1,17 +1,15 @@
 package com.neuedu.hospitalinformationsystem.po;
 
 public class Disease {
-    //自动生成主键
     private Integer disId;
-    //疾病完整编码
-    private String disIcd;
-    //疾病完整名称
-    private String disName;
-    //拼音首拼
-    private String disCode;
-    //疾病种类
-    private String disType;
 
+    private String disIcd;
+
+    private String disName;
+
+    private String disCode;
+
+    private String disType;
 
     public Integer getDisId() {
         return disId;
@@ -51,5 +49,20 @@ public class Disease {
 
     public void setDisType(String disType) {
         this.disType = disType;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", disId=").append(disId);
+        sb.append(", disIcd=").append(disIcd);
+        sb.append(", disName=").append(disName);
+        sb.append(", disCode=").append(disCode);
+        sb.append(", disType=").append(disType);
+        sb.append("]");
+        return sb.toString();
     }
 }

@@ -1,60 +1,134 @@
 package com.neuedu.hospitalinformationsystem.po;
 
 public class Registration {
-    private int rId;
-    private String rName;
-    private boolean isDefault;
-    private int rOrder;
-    private double rFee;
+    private Integer rId;
 
-    @Override
-    public String toString() {
-        return "Registration{" +
-                "rId=" + rId +
-                ", rName='" + rName + '\'' +
-                ", isDefault=" + isDefault +
-                ", rOrder=" + rOrder +
-                ", rFee=" + rFee +
-                '}';
-    }
+    private Integer drId;
 
-    public int getrId() {
+    private Integer eId;
+
+    private String dId;
+
+    private Integer mRId;
+
+    private Integer rLId;
+
+    private Integer pId;
+
+    private Integer uId;
+
+    private Integer rOrder;
+
+    private Double rFee;
+
+    private Boolean hasMedicalHistory;
+
+    public Integer getrId() {
         return rId;
     }
 
-    public void setrId(int rId) {
+    public void setrId(Integer rId) {
         this.rId = rId;
     }
 
-    public String getrName() {
-        return rName;
+    public Integer getDrId() {
+        return drId;
     }
 
-    public void setrName(String rName) {
-        this.rName = rName;
+    public void setDrId(Integer drId) {
+        this.drId = drId;
     }
 
-    public boolean isDefault() {
-        return isDefault;
+    public Integer geteId() {
+        return eId;
     }
 
-    public void setDefault(boolean aDefault) {
-        isDefault = aDefault;
+    public void seteId(Integer eId) {
+        this.eId = eId;
     }
 
-    public int getrOrder() {
+    public String getdId() {
+        return dId;
+    }
+
+    public void setdId(String dId) {
+        this.dId = dId;
+    }
+
+    public Integer getmRId() {
+        return mRId;
+    }
+
+    public void setmRId(Integer mRId) {
+        this.mRId = mRId;
+    }
+
+    public Integer getrLId() {
+        return rLId;
+    }
+
+    public void setrLId(Integer rLId) {
+        this.rLId = rLId;
+    }
+
+    public Integer getpId() {
+        return pId;
+    }
+
+    public void setpId(Integer pId) {
+        this.pId = pId;
+    }
+
+    public Integer getuId() {
+        return uId;
+    }
+
+    public void setuId(Integer uId) {
+        this.uId = uId;
+    }
+
+    public Integer getrOrder() {
         return rOrder;
     }
 
-    public void setrOrder(int rOrder) {
+    public void setrOrder(Integer rOrder) {
         this.rOrder = rOrder;
     }
 
-    public double getrFee() {
+    public Double getrFee() {
         return rFee;
     }
 
-    public void setrFee(double rFee) {
+    public void setrFee(Double rFee) {
         this.rFee = rFee;
+    }
+
+    public Boolean getHasMedicalHistory() {
+        return hasMedicalHistory;
+    }
+
+    public void setHasMedicalHistory(Boolean hasMedicalHistory) {
+        this.hasMedicalHistory = hasMedicalHistory;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", rId=").append(rId);
+        sb.append(", drId=").append(drId);
+        sb.append(", eId=").append(eId);
+        sb.append(", dId=").append(dId);
+        sb.append(", mRId=").append(mRId);
+        sb.append(", rLId=").append(rLId);
+        sb.append(", pId=").append(pId);
+        sb.append(", uId=").append(uId);
+        sb.append(", rOrder=").append(rOrder);
+        sb.append(", rFee=").append(rFee);
+        sb.append(", hasMedicalHistory=").append(hasMedicalHistory);
+        sb.append("]");
+        return sb.toString();
     }
 }
