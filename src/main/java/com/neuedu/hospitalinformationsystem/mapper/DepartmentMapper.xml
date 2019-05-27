@@ -11,13 +11,13 @@
                 and dId = #{dId}
             </if>
             <if test="dName != null and dName !=''">
-                and dName = #{dName}
+                and dName like '%' #{dName} '%'
             </if>
             <if test="dType != null and dType !=''">
-                and dType = #{dType}
+                and dType like '%' #{dType} '%'
             </if>
             <if test="dCategory != null and dCategory !=''">
-                and dCategory = #{dCategory}
+                and dCategory like '%' #{dCategory} '%'
             </if>
         </where>
 
