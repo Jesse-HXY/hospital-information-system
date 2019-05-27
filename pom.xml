@@ -126,8 +126,19 @@
                 <directory>src/main/resources</directory>
                 <includes>
                     <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                    <include>**/*.tld</include>
+                    <include>**/*.css</include>
+                    <include>**/*.html</include>
+                    <include>**/*.js</include>
+                    <include>**/*.eot</include>
+                    <include>**/*.ttf</include>
+                    <include>**/*.woff</include>
+                    <include>**/*.png</include>
+                    <include>**/**/**/*.css</include>
+                    <include>**/**/*.js</include>
+                    <include>**/**/**/*.png</include>
+                    <include>**/**/**/*.gif</include>
+                    <include>**/**/*.gif</include>
+                    <include>**/**/**/*.js</include>
                 </includes>
                 <filtering>false</filtering>
             </resource>
