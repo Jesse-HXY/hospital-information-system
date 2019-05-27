@@ -8,5 +8,19 @@
         select distinct disType from disease
     </select>
 
+    <select id="getDiseases" resultType="com.neuedu.hospitalinformationsystem.po.Disease">
+        select * form disease
+        <where>
+            <if test="disName != null and disName != ''">
+                and disName like '%' #{disName} '%'
+            </if>
+            <if test="disCode != null and disCode != ''">
+                and disCode = #{disCode}
+            </if>
+            <if test="disType != null and disType != ''">
+                and disType = #{disType}
+            </if>
+        </where>
+    </select>
 
 </mapper>

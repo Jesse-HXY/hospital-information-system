@@ -23,7 +23,8 @@ public class DepartmentTest {
     public void getDepartmentTest() {
         Department department = new Department();
         department.setdId("AZBK");
-        List<Department> departments = departmentService.getDepartments(department);
+       // List<Department> departments = departmentService.getDepartments(department);
+        List<Department> departments = departmentService.getAllDepartments();
         System.out.println(departments);
     }
 

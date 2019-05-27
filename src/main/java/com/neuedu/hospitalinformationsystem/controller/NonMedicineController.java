@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@RequestMapping("/NonMedicine")
+@RequestMapping("/nonMedicine")
 public class NonMedicineController {
 
     @Resource
