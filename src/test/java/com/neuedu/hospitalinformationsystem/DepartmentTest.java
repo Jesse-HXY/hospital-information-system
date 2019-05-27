@@ -38,7 +38,8 @@ public class DepartmentTest {
         Department department = new Department();
         department.setdId("df");
         department.setdName("h3h");
-        department.setdCatagory(1);
+        department.setdType("内科");
+        department.setdCategory("临床科室");
         assertEquals(true, departmentService.insertDepartment(department));
     }
 }

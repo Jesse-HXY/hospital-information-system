@@ -20,9 +20,8 @@ public class DepartmentController {
     public List<Department> getDepartments(@RequestBody Department department) {
         return departmentService.getDepartments(department);
     }
-//    @CrossOrigin
+
     @PostMapping("/getAllDepartments")
-    @ResponseBody
     public List<Department> getAllDepartments() {
         return  departmentService.getAllDepartments();
     }

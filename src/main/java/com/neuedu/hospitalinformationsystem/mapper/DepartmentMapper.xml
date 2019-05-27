@@ -5,13 +5,16 @@
 <mapper namespace="com.neuedu.hospitalinformationsystem.mapper.DepartmentMapper">
 
     <select id="getDepartments" resultType="com.neuedu.hospitalinformationsystem.po.Department">
-        select dId, dName, dCategory from department
+        select dId, dName, dType, dCategory from department
         <where>
             <if test="dId != null">
                 and dId = #{dId}
             </if>
             <if test="dName != null and dName !=''">
                 and dName = #{dName}
+            </if>
+            <if test="dType != null and dType !=''">
+                and dType = #{dType}
             </if>
             <if test="dCategory != null and dCategory !=''">
                 and dCategory = #{dCategory}
@@ -21,7 +24,7 @@
     </select>
 
     <select id="getAllDepartments" resultType="com.neuedu.hospitalinformationsystem.po.Department">
-        select dId, dName, dCategory from department
+        select dId, dName, dType, dCategory from department
     </select>
 
 
@@ -30,7 +33,7 @@
     </delete>
 
     <insert id="insertDepartment">
-        insert into department values(#{dId},#{dName},#{dCategory})
+        insert into department values(#{dId}, #{dName}, #{dType}, #{dCategory})
     </insert>
 
 </mapper>

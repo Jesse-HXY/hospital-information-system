@@ -3,15 +3,33 @@ package com.neuedu.hospitalinformationsystem.po;
 public class Department {
     private String dId;
     private String dName;
-    private int dCategory;//1代表 临床科室, 0代表 医技科室
+    private String dType;
+    private String dCategory;
 
     @Override
     public String toString() {
         return "Department{" +
-                "dId=" + dId +
+                "dId='" + dId + '\'' +
                 ", dName='" + dName + '\'' +
-                ", dCatagory=" + dCategory +
+                ", dType='" + dType + '\'' +
+                ", dCategory='" + dCategory + '\'' +
                 '}';
+    }
+
+    public String getdCategory() {
+        return dCategory;
+    }
+
+    public void setdCategory(String dCategory) {
+        this.dCategory = dCategory;
+    }
+
+    public String getdType() {
+        return dType;
+    }
+
+    public void setdType(String dType) {
+        this.dType = dType;
     }
 
     public String getdId() {
@@ -30,11 +48,4 @@ public class Department {
         this.dName = dName;
     }
 
-    public int getdCatagory() {
-        return dCategory;
-    }
-
-    public void setdCatagory(int dCatagory) {
-        this.dCategory = dCatagory;
-    }
 }
