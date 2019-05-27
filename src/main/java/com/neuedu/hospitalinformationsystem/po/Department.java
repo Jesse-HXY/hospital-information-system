@@ -30,7 +30,7 @@ public class Department {
         this.dName = dName;
     }
 
-    public int isdCatagory() {
+    public int getdCatagory() {
         return dCategory;
     }
 

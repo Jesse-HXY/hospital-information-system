@@ -3,9 +3,7 @@ package com.neuedu.hospitalinformationsystem.controller;
 import com.neuedu.hospitalinformationsystem.po.Department;
 import com.neuedu.hospitalinformationsystem.service.DepartmentService;
 import net.sf.json.JSONObject;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -18,13 +16,15 @@ public class DepartmentController {
     private DepartmentService departmentService;
 
     @RequestMapping("/getDepartments")
+
     public List<Department> getDepartments(@RequestBody Department department) {
         return departmentService.getDepartments(department);
     }
-
-    @RequestMapping("/getAllDepartments")
+//    @CrossOrigin
+    @PostMapping("/getAllDepartments")
+    @ResponseBody
     public List<Department> getAllDepartments() {
-        return departmentService.getAllDepartments();
+        return  departmentService.getAllDepartments();
     }
 
     @RequestMapping("/deleteDepartment")
@@ -40,6 +40,7 @@ public class DepartmentController {
 
     @RequestMapping("/insertDepartment")
     public String insertDepartment(@RequestBody Department department) {
+
         Boolean result = departmentService.insertDepartment(department);
         if (result) {
             return "{\"result\":true}";
