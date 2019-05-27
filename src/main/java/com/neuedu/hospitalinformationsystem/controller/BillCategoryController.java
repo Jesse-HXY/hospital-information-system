@@ -12,7 +12,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/BillCategory")
+@RequestMapping("/billCategory")
 public class BillCategoryController {
 
     @Resource
