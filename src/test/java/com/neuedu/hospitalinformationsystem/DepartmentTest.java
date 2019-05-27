@@ -23,9 +23,13 @@ public class DepartmentTest {
     public void getDepartmentTest() {
         Department department = new Department();
         department.setdId("AZBK");
-       // List<Department> departments = departmentService.getDepartments(department);
-        List<Department> departments = departmentService.getAllDepartments();
+        List<Department> departments = departmentService.getDepartments(department);
         System.out.println(departments);
+    }
+
+    @Test
+    public void getAllDepartments() {
+        departmentService.getAllDepartments();
     }
 
     @Test
@@ -41,5 +45,15 @@ public class DepartmentTest {
         department.setdType("内科");
         department.setdCategory("临床科室");
         assertEquals(true, departmentService.insertDepartment(department));
+    }
+
+    @Test
+    public void updateDepartment(){
+        Department department = new Department();
+        department.setdId("AZBK");
+        department.setdName("h3h");
+        department.setdType("外科");
+        department.setdCategory("临床科室");
+        assertEquals(true, departmentService.updateDepartment(department));
     }
 }

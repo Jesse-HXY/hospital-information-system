@@ -31,4 +31,9 @@ public class DepartmentService {
         departmentMapper.insertDepartment(department);
         return true;
     }
+
+    public boolean updateDepartment(Department department){
+        departmentMapper.updateDepartment(department);
+        return true;
+    }
 }

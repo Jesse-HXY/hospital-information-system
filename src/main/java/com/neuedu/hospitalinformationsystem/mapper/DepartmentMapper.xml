@@ -36,4 +36,14 @@
         insert into department values(#{dId}, #{dName}, #{dType}, #{dCategory})
     </insert>
 
+    <update id="updateDepartment">
+        update department
+        <set>
+            <if test="dName != null and dName !=''">dName=#{dName},</if>
+            <if test="dType != null and dType !=''">dType=#{dType},</if>
+            <if test="dCategory != null and dCategory !=''">dCategory=#{dCategory},</if>
+        </set>
+        where dId = #{dId}
+    </update>
+
 </mapper>

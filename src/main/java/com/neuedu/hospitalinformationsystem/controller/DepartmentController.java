@@ -47,4 +47,14 @@ public class DepartmentController {
             return "{\"result\":false}";
         }
     }
+
+    @RequestMapping("/updateDepartment")
+    public String updateDepartment(@RequestBody Department department){
+        Boolean result = departmentService.updateDepartment(department);
+        if (result) {
+            return "{\"result\":true}";
+        } else {
+            return "{\"result\":false}";
+        }
+    }
 }
