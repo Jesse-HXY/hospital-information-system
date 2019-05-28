@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.hospitalinformationsystem.mapper.MedicineMapper">
+
+  <insert id="insert" parameterType="com.neuedu.hospitalinformationsystem.po.Medicine">
+    <!--@mbg.generated-->
+    insert into medicine (mId, mName, mSpell, 
+      mSepcification, mUnit, mProducer, 
+      mType, mFee)
+    values (#{mId,jdbcType=VARCHAR}, #{mName,jdbcType=VARCHAR}, #{mSpell,jdbcType=VARCHAR}, 
+      #{mSepcification,jdbcType=VARCHAR}, #{mUnit,jdbcType=VARCHAR}, #{mProducer,jdbcType=VARCHAR}, 
+      #{mType,jdbcType=VARCHAR}, #{mFee,jdbcType=DOUBLE})
+  </insert>
+</mapper>

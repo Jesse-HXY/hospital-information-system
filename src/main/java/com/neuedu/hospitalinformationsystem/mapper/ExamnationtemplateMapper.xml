@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.hospitalinformationsystem.mapper.ExamnationtemplateMapper">
+
+  <insert id="insert" parameterType="com.neuedu.hospitalinformationsystem.po.Examnationtemplate">
+    <!--@mbg.generated-->
+    insert into examnationtemplate (eTId, eTName, eTDate, 
+      eTScope, recordType, eTFee
+      )
+    values (#{eTId,jdbcType=INTEGER}, #{eTName,jdbcType=VARCHAR}, #{eTDate,jdbcType=DATE}, 
+      #{eTScope,jdbcType=VARCHAR}, #{recordType,jdbcType=VARCHAR}, #{eTFee,jdbcType=DOUBLE}
+      )
+  </insert>
+</mapper>

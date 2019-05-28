@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.hospitalinformationsystem.mapper.ArrangementregulationMapper">
+
+  <insert id="insert" parameterType="com.neuedu.hospitalinformationsystem.po.Arrangementregulation">
+    <!--@mbg.generated-->
+    insert into arrangementregulation (arId, dId, arName, 
+      arPlan)
+    values (#{arId,jdbcType=VARCHAR}, #{dId,jdbcType=VARCHAR}, #{arName,jdbcType=INTEGER}, 
+      #{arPlan,jdbcType=INTEGER})
+  </insert>
+</mapper>

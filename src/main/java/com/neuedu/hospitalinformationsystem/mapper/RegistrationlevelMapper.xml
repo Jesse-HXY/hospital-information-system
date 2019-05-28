@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.hospitalinformationsystem.mapper.RegistrationlevelMapper">
+
+  <insert id="insert" parameterType="com.neuedu.hospitalinformationsystem.po.Registrationlevel">
+    <!--@mbg.generated-->
+    insert into registrationlevel (rLId, rLName, rLLimitation, 
+      rLFee)
+    values (#{rLId,jdbcType=INTEGER}, #{rLName,jdbcType=VARCHAR}, #{rLLimitation,jdbcType=INTEGER}, 
+      #{rLFee,jdbcType=DOUBLE})
+  </insert>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.hospitalinformationsystem.mapper.MedicalrecordMapper">
+
+  <insert id="insert" parameterType="com.neuedu.hospitalinformationsystem.po.Medicalrecord">
+    <!--@mbg.generated-->
+    insert into medicalrecord (mRId, pId, mChiefComplaint, 
+      mHistoryOfPresentIllness, mSituation, mHistoryOfPastIllness, 
+      mAllergy, mPhysicalExamination, mSuggestion, 
+      mMention)
+    values (#{mRId,jdbcType=INTEGER}, #{pId,jdbcType=INTEGER}, #{mChiefComplaint,jdbcType=VARCHAR}, 
+      #{mHistoryOfPresentIllness,jdbcType=VARCHAR}, #{mSituation,jdbcType=VARCHAR}, #{mHistoryOfPastIllness,jdbcType=VARCHAR}, 
+      #{mAllergy,jdbcType=VARCHAR}, #{mPhysicalExamination,jdbcType=VARCHAR}, #{mSuggestion,jdbcType=VARCHAR}, 
+      #{mMention,jdbcType=VARCHAR})
+  </insert>
+
+</mapper>

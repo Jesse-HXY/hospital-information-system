@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.hospitalinformationsystem.mapper.DiagnosistemplateMapper">
+
+  <insert id="insert" parameterType="com.neuedu.hospitalinformationsystem.po.Diagnosistemplate">
+    <!--@mbg.generated-->
+    insert into diagnosistemplate (datId, diaTId, `uId`, 
+      datName, datTime, datFee, 
+      datScope)
+    values (#{datId,jdbcType=INTEGER}, #{diaTId,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, 
+      #{datName,jdbcType=VARCHAR}, #{datTime,jdbcType=DATE}, #{datFee,jdbcType=DOUBLE}, 
+      #{datScope,jdbcType=VARCHAR})
+  </insert>
+</mapper>
